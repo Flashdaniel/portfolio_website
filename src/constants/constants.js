@@ -17,6 +17,15 @@ export const projects = [
     visit: 'https://adopt-me-3ea97.web.app/',
     id: 1,
   },
+  {
+    title: 'Order summary component challenge',
+    description:"The challenge is to build out this order summary card component and get it looking as close to the design as possible.",
+    image: 'https://i.im.ge/2021/10/13/or7WQ9.png',
+    tags: ['React', 'JavaScript', 'HTML'],
+    source: 'https://github.com/Flashdaniel/Order-summary-component-challenge',
+    visit: 'https://quirky-wilson-c38124.netlify.app/',
+    id: 2,
+  },
   
 ];
 
