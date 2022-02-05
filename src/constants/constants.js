@@ -29,7 +29,7 @@ export const projects = [
   {
     title: 'JustGomo API',
     description:"Built a justgomo  smart api for justgomo smart app",
-    image: 'https://ibb.co/dBd71RV',
+    image: 'https://i.ibb.co/dBd71RV/Screenshot-301.png',
     tags: ['Python', 'postgresql'],
     source: 'https://github.com/Flashdaniel/Justgomo-app-api',
     visit: 'https://justgomo.herokuapp.com/',
