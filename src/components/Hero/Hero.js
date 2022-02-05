@@ -10,10 +10,10 @@ const Hero = (props) => (
       <LeftSection>
         <SectionTitle main center>
           Hi, <br />
-          I'm Nwez Daniel
+          I'm Nweze Daniel
         </SectionTitle>
         <SectionText>
-        A  UI Designer and Full Stack Web Developer focused on crafting clean & user-friendly experiences, I am
+        A  Full Stack Web Developer focused on crafting clean & user-friendly experiences, I am
 							passionate about building excellent softwares that improves the
 							lives of those around me.
         </SectionText>

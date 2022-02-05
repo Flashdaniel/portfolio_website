@@ -26,6 +26,15 @@ export const projects = [
     visit: 'https://quirky-wilson-c38124.netlify.app/',
     id: 2,
   },
+  {
+    title: 'JustGomo API',
+    description:"Built a justgomo  smart api for justgomo smart app",
+    image: 'https://ibb.co/dBd71RV',
+    tags: ['Python', 'postgresql'],
+    source: 'https://github.com/Flashdaniel/Justgomo-app-api',
+    visit: 'https://justgomo.herokuapp.com/',
+    id: 2,
+  },
   
 ];
 
