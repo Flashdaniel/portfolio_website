@@ -1,8 +1,18 @@
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import React from "react";
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 
-import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import { SocialIcons } from "../Header/HeaderStyles";
+import {
+  CompanyContainer,
+  FooterWrapper,
+  LinkColumn,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialContainer,
+  SocialIconsContainer,
+} from "./FooterStyles";
 
 const Footer = () => {
   return (
@@ -14,8 +24,8 @@ const Footer = () => {
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:flashdaniel0@gmail.com">
-          flashdaniel0@gmail.com
+          <LinkItem href="mailto:johnrossdiyoke@gmail.com">
+            johnrossdiyoke@gmail.com
           </LinkItem>
         </LinkColumn>
       </LinkList>

@@ -1,8 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import React from "react";
+import Link from "next/link";
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import Button from "../../styles/GlobalComponents/Button";
+import { LeftSection } from "./HeroStyles";
 
 const Hero = (props) => (
   <>
@@ -10,14 +14,14 @@ const Hero = (props) => (
       <LeftSection>
         <SectionTitle main center>
           Hi, <br />
-          I'm Nweze Daniel
+          I'm Johncross Diyoke
         </SectionTitle>
         <SectionText>
-        A  Full Stack Web Developer focused on crafting clean & user-friendly experiences, I am
-							passionate about building excellent softwares that improves the
-							lives of those around me.
+          A Full Stack Web Developer focused on crafting clean & user-friendly
+          experiences, I am passionate about building excellent softwares that
+          improves the lives of those around me.
         </SectionText>
-        <Link href='#about'>
+        <Link href="#about">
           <Button onClick={props.handleClick}>Learn More</Button>
         </Link>
       </LeftSection>
