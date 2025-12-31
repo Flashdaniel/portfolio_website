@@ -1,15 +1,27 @@
-import Link from 'next/link';
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
+import Link from "next/link";
+import React from "react";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+} from "react-icons/ai";
+import { DiCssdeck } from "react-icons/di";
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
+import {
+  Container,
+  Div1,
+  Div2,
+  Div3,
+  NavLink,
+  SocialIcons,
+} from "./HeaderStyles";
 
-const Header = () =>  (
+const Header = () => (
   <Container>
     <Div1>
       <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center', color:"white" }}>
+        <a style={{ display: "flex", alignItems: "center", color: "white" }}>
           <DiCssdeck size="3rem" /> <span>Portfolio</span>
         </a>
       </Link>
@@ -24,25 +36,25 @@ const Header = () =>  (
         <Link href="#tech">
           <NavLink>Technologies</NavLink>
         </Link>
-      </li>        
+      </li>
       <li>
         <Link href="#about">
           <NavLink>About</NavLink>
         </Link>
-      </li>        
+      </li>
     </Div2>
-      <Div3>
-        <SocialIcons href="https://github.com/Flashdaniel/">
-          <AiFillGithub size="3rem" />
-        </SocialIcons>
-        <SocialIcons href="https://www.linkedin.com/in/daniel-nweze-017909214/">
-          <AiFillLinkedin size="3rem" />
-        </SocialIcons>
-        <SocialIcons href="https://www.instagram.com/flash__daniel/">
-          <AiFillInstagram size="3rem"/>
-        </SocialIcons>
-      </Div3>
-    </Container>
+    <Div3>
+      <SocialIcons href="https://github.com/Flashdaniel/">
+        <AiFillGithub size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://www.linkedin.com/in/daniel-nweze-017909214/">
+        <AiFillLinkedin size="3rem" />
+      </SocialIcons>
+      <SocialIcons href="https://x.com/iamflashdaniel">
+        <AiFillTwitterCircle size="3rem" />
+      </SocialIcons>
+    </Div3>
+  </Container>
 );
 
 export default Header;

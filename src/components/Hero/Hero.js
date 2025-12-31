@@ -14,12 +14,11 @@ const Hero = (props) => (
       <LeftSection>
         <SectionTitle main center>
           Hi, <br />
-          I'm Johncross Diyoke
+          I'm Daniel Nweze
         </SectionTitle>
         <SectionText>
-          A Full Stack Web Developer focused on crafting clean & user-friendly
-          experiences, I am passionate about building excellent softwares that
-          improves the lives of those around me.
+          A Frontend Engineer and Visionary. Turning vision into digital
+          reality, one interface at a time
         </SectionText>
         <Link href="#about">
           <Button onClick={props.handleClick}>Learn More</Button>
