@@ -65,47 +65,23 @@ const Timeline = () => {
 
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
-      <SectionText>
-        I’m a Frontend Engineer passionate about building reliable, user-focused
-        web applications and deeply understanding the technologies I work with,
-        beyond surface level.
+      <SectionTitle>About Me & Engineering Journey</SectionTitle>
+      <SectionText style={{ maxWidth: '880px', paddingBottom: '2.5rem' }}>
+        I am a <strong>Frontend Engineer</strong> dedicated to building accessible, scalable, and user-focused digital products. Rather than treating frontend development as visual skinning, I approach user interfaces from an engineering discipline—emphasizing component boundaries, predictable state trees, performance budgets, and inclusive accessibility (WCAG).
+        <br /><br />
+        My background blends engineering rigor and computer science fundamentals. I graduated in Agricultural & Bioresources Engineering from the University of Nigeria, which honed my analytical thinking, mathematical problem-solving, and systems-level mindset. To deepen my software foundations, I completed Harvard University's renowned <strong>CS50</strong> program, gaining deep insights into algorithmic efficiency, memory, and data structures.
+        <br /><br />
+        I further refined my software craftsmanship at <strong>AltSchool Africa</strong>, completing a rigorous curriculum in Frontend Engineering with hands-on production builds using React, TypeScript, and modern ecosystem tooling.
+        <br /><br />
+        <strong>Engineering Principles I Focus On:</strong>
         <br />
+        • <strong>Scalable Component Architecture:</strong> Creating maintainable, well-typed design systems using React, TypeScript, and Tailwind CSS / shadcn/ui.
         <br />
-        My tech journey has been unconventional. I studied Agricultural &
-        Bioresources Engineering at the University of Nigeria, where I developed
-        strong problem-solving and analytical thinking skills before
-        transitioning fully into software engineering. I later trained at
-        AltSchool Africa, where I gained hands-on experience building modern web
-        applications using tools like JavaScript, TypeScript, React, Vue.js, and
-        modern frontend workflows. I also completed CS50 (Harvard University),
-        which strengthened my foundation in computer science and programming
-        principles.
+        • <strong>Predictable State & Data Fetching:</strong> Employing Zustand and TanStack Query to isolate complex UI state and prevent unnecessary re-renders.
         <br />
+        • <strong>Accessibility & Usability:</strong> Designing accessible navigation, keyboard interactions, semantic landmarks, and high-contrast visual hierarchies.
         <br />
-        I’m particularly interested in:
-        <br />
-        <br />
-        1. Frontend architecture and clean code structure
-        <br />
-        2. Building scalable, maintainable user interfaces
-        <br />
-        3. Using AI tools responsibly to improve developer productivity
-        <br />
-        4. Product-driven engineering and solving real-world problems
-        <br />
-        <br />
-        I believe that strong engineers understand why things work, not just
-        how. That mindset helps me build faster, think in multiple approaches,
-        and adapt easily to new tools and challenges.
-        <br />
-        <br />
-        I’m currently focused on growing as a frontend engineer, building real
-        products, and exploring opportunities where I can learn from experienced
-        teams while also working toward my long-term goal of building impactful
-        products of my own.
-        <br />
-        <br />
+        • <strong>Continuous Growth & Agency:</strong> Continuously expanding my technical horizon across modern architectures, automated testing, and developer tooling.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
@@ -128,13 +104,14 @@ const Timeline = () => {
                     viewBox="0 0 208 6"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M2.5 5.5C3.88071 5.5 5 4.38071 5 3V3.5L208 3.50002V2.50002L5 2.5V3C5 1.61929 3.88071 0.5 2.5 0.5C1.11929 0.5 0 1.61929 0 3C0 4.38071 1.11929 5.5 2.5 5.5Z"
                       fill="url(#paint0_linear)"
-                      fill-opacity="0.33"
+                      fillOpacity="0.33"
                     />
                     <defs>
                       <linearGradient
@@ -145,11 +122,11 @@ const Timeline = () => {
                         y2="0.500295"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop stop-color="white" />
+                        <stop stopColor="white" />
                         <stop
                           offset="0.79478"
-                          stop-color="white"
-                          stop-opacity="0"
+                          stopColor="white"
+                          stopOpacity="0"
                         />
                       </linearGradient>
                     </defs>
@@ -170,6 +147,7 @@ const Timeline = () => {
               active={activeItem}
               onClick={(e) => handleClick(e, index)}
               type="button"
+              aria-label={`Slide ${index + 1}: ${item.year}`}
             >
               <CarouselButtonDot active={activeItem} />
             </CarouselButton>
@@ -182,3 +160,4 @@ const Timeline = () => {
 };
 
 export default Timeline;
+

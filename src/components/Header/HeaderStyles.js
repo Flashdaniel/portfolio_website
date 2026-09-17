@@ -1,63 +1,139 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
+export const Container = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 1.5rem 2rem;
+  }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 `;
+
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-`;
-export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
-  display: flex;
-  justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
-  }
-`;
-export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+`;
+
+export const LogoLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
+export const LogoBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #13ADC7 0%, #945DD6 100%);
+  color: #ffffff;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 14px rgba(19, 173, 199, 0.3);
+`;
+
+export const LogoText = styled.span`
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+
+  .name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .role {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #13ADC7;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+`;
+
+export const Div2 = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`;
+
+export const Div3 = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    justify-content: center;
   }
 `;
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 2rem;
-  line-height: 32px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 24px;
   color: rgba(255, 255, 255, 0.75);
-  transition: 0.4s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+
   &:hover {
-    color: #fff;
-    opacity: 1;
+    color: #ffffff;
     cursor: pointer;
   }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #13ADC7, #945DD6);
+    transition: width 0.3s ease;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.5rem;
+    font-size: 1.5rem;
   }
 `;
 

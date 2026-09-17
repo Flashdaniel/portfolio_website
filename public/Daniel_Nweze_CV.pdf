@@ -1,0 +1,69 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3149 >>
+stream
+BT /F2 20 Tf 50 750 Td (DANIEL NWEZE) Tj ET
+BT /F2 13 Tf 50 730 Td (FRONTEND ENGINEER) Tj ET
+BT /F1 10 Tf 50 712 Td (Lagos, Nigeria | flashdaniel0@gmail.com | +234 810 076 7459) Tj ET
+BT /F1 9 Tf 50 698 Td (GitHub: github.com/Flashdaniel | LinkedIn: linkedin.com/in/daniel-nweze-017909214 | X: @iamflashdaniel) Tj ET
+BT /F2 12 Tf 50 672 Td (PROFESSIONAL SUMMARY) Tj ET
+BT /F1 10 Tf 50 656 Td (Frontend Engineer building accessible, scalable, and user-focused digital products. Skilled in React, TypeScript,) Tj ET
+BT /F1 10 Tf 50 642 Td (Next.js, and modern CSS architectures. Bridges engineering rigor with thoughtful UI design, state management) Tj ET
+BT /F1 10 Tf 50 628 Td (\(Zustand, TanStack Query\), web accessibility \(WCAG\), and responsive client-side performance.) Tj ET
+BT /F2 12 Tf 50 602 Td (CORE TECHNICAL SKILLS) Tj ET
+BT /F1 10 Tf 50 586 Td (Frontend & Frameworks: React, TypeScript, Next.js, JavaScript \(ES6+\), Vite, HTML5, Semantic Web) Tj ET
+BT /F1 10 Tf 50 572 Td (Styling & UI Architecture: Tailwind CSS, shadcn/ui, Styled Components, Modern CSS, Responsive Design, WCAG) Tj ET
+BT /F1 10 Tf 50 558 Td (State Management & APIs: Zustand, TanStack Query, REST APIs, Context API, Convex) Tj ET
+BT /F1 10 Tf 50 544 Td (Tools & Cloud Services: Git, GitHub, Supabase, Firebase, Chrome DevTools, VS Code) Tj ET
+BT /F2 12 Tf 50 518 Td (FEATURED ENGINEERING PROJECTS) Tj ET
+BT /F2 10 Tf 50 502 Td (Audiophile E-Commerce Platform | Next.js, React, TypeScript, Convex, Tailwind CSS, Radix UI) Tj ET
+BT /F1 9.5 Tf 60 488 Td (- Engineered a high-performance audio equipment e-commerce web platform with dynamic cart state management.) Tj ET
+BT /F1 9.5 Tf 60 474 Td (- Implemented responsive product showcases, checkout validation, and fast server-rendered pages.) Tj ET
+BT /F2 10 Tf 50 452 Td (Markdown Studio Pro | React, Vite, Tailwind CSS, shadcn/ui, CodeMirror) Tj ET
+BT /F1 9.5 Tf 60 438 Td (- Built an interactive Markdown workspace with live preview, syntax highlighting, and local state persistence.) Tj ET
+BT /F1 9.5 Tf 60 424 Td (- Designed responsive split-pane interface and multi-format document exporting.) Tj ET
+BT /F2 10 Tf 50 402 Td (Bejamas E-Commerce Storefront | React, Tailwind CSS, JavaScript) Tj ET
+BT /F1 9.5 Tf 60 388 Td (- Developed responsive storefront with dynamic product filtering, slide-out cart drawer, and mobile-first UX.) Tj ET
+BT /F2 10 Tf 50 366 Td (TicketFlow Support Portal | React, State Management, REST APIs) Tj ET
+BT /F1 9.5 Tf 60 352 Td (- Customer support ticket management app with real-time status updates and state persistence.) Tj ET
+BT /F2 12 Tf 50 326 Td (EDUCATION & CERTIFICATIONS) Tj ET
+BT /F2 10 Tf 50 310 Td (Diploma in Software Engineering \(Frontend\) - AltSchool Africa) Tj ET
+BT /F2 10 Tf 50 294 Td (B.Eng in Agricultural & Bioresources Engineering - University of Nigeria, Nsukka) Tj ET
+BT /F2 10 Tf 50 278 Td (CS50: Introduction to Computer Science - Harvard University) Tj ET
+0.8 0.8 0.8 RG 1 w 50 724 m 550 724 l S
+0.8 0.8 0.8 RG 1 w 50 666 m 550 666 l S
+0.8 0.8 0.8 RG 1 w 50 596 m 550 596 l S
+0.8 0.8 0.8 RG 1 w 50 512 m 550 512 l S
+0.8 0.8 0.8 RG 1 w 50 320 m 550 320 l S
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000327 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3603
+%%EOF

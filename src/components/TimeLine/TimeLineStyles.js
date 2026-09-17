@@ -112,8 +112,8 @@ export const CarouselItemText = styled.p`
     padding-right: 32px;
   }
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 20px;
     padding-right: 0;
   }
 `
