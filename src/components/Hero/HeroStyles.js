@@ -181,6 +181,41 @@ export const HeroBtnSecondary = styled.a`
   }
 `;
 
+export const HeroBtnLinkedIn = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #38bdf8;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(56, 189, 248, 0.18);
+    border-color: #38bdf8;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 1.1rem 2rem;
+    font-size: 1.4rem;
+  }
+`;
+
 export const QuickLinksRow = styled.div`
   display: flex;
   align-items: center;
@@ -207,20 +242,23 @@ export const QuickLinkItem = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #cbd5e1;
+  color: ${(props) => (props.highlight ? '#38bdf8' : '#cbd5e1')};
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: ${(props) => (props.highlight ? '600' : '500')};
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid #1e293b;
+  background: ${(props) =>
+    props.highlight ? 'rgba(56, 189, 248, 0.08)' : 'rgba(255, 255, 255, 0.03)'};
+  border: 1px solid
+    ${(props) => (props.highlight ? 'rgba(56, 189, 248, 0.3)' : '#1e293b')};
   transition: all 0.2s ease;
 
   &:hover {
     color: #ffffff;
-    background: #1e293b;
-    border-color: #475569;
+    background: ${(props) => (props.highlight ? 'rgba(56, 189, 248, 0.2)' : '#1e293b')};
+    border-color: ${(props) => (props.highlight ? '#38bdf8' : '#475569')};
+    transform: translateY(-1px);
   }
 
   &:focus-visible {

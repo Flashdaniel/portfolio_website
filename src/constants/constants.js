@@ -1,57 +1,73 @@
 export const featuredProjects = [
   {
-    title: "Audiophile E-Commerce Platform",
-    subtitle: "Full-Featured Audio Equipment Storefront & Checkout",
+    slug: "myrabbai",
+    title: "myRabbAi",
+    badge: "Professional Experience",
+    badgeType: "commercial",
+    company: "The Upskill Space",
+    isProminent: true,
     description:
-      "A high-performance audio equipment e-commerce application engineered with Next.js, React, Tailwind CSS, Radix UI primitives, and a Convex backend. Implements persistent multi-item cart state, responsive product catalog, server-rendered pages for low latency, and robust form validation for checkout.",
-    highlights: [
-      "Dynamic cart state with persistent localStorage synchronization",
-      "Multi-step checkout validation handling shipping & payment methods",
-      "Fast server-rendered pages and optimized image delivery",
-      "Accessible UI primitives powered by Radix UI and Tailwind CSS",
-    ],
+      "Commercial AI-powered CBT examination platform delivering personalized practice tests and automated scoring for Nigerian secondary students (JAMB, WAEC, NECO).",
+    role: "Frontend Developer (The Upskill Space)",
+    keyFeature:
+      "Real-time CBT examination engine with client-side timer persistence, defensive offline caching, and responsive question-and-answer workflows.",
+    tags: ["React", "TypeScript", "Next.js", "REST APIs", "Tailwind CSS"],
+    visit: "https://myrabbai.com.ng/",
+    source: "https://github.com/Flashdaniel",
     image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
-    tags: ["Next.js", "React", "TypeScript", "Convex", "Tailwind CSS", "Radix UI"],
-    source: "https://github.com/Flashdaniel/hng-audiophile",
-    visit: "https://bespoke-wisp-2d4be3.netlify.app/",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     id: 1,
   },
   {
-    title: "Markdown Studio Pro",
-    subtitle: "Real-Time Developer Markdown Workspace & Editor",
+    slug: "interactive-learning-platform",
+    title: "Interactive Learning Platform",
+    badge: "Full-Stack EdTech",
+    badgeType: "architecture",
     description:
-      "A desktop-grade web Markdown editor and document workspace built with React, Vite, Tailwind CSS, shadcn/ui, and CodeMirror. Delivers instant AST preview parsing, syntax highlighting, local document persistence, and multi-format document exporting (HTML and Markdown).",
-    highlights: [
-      "Synchronized split-pane editor with instantaneous live preview",
-      "Embedded CodeMirror editor with markdown syntax highlighting",
-      "Document state persistence with auto-save across sessions",
-      "Clean dark/light UI tokens and accessible modal dialogs",
-    ],
-    image:
-      "https://experimental-pink-v060lhrw57.edgeone.app/Screenshot%202025-12-31%20at%2014-05-33%20markdown.png",
-    tags: ["React", "shadcn/ui", "Tailwind CSS", "Vite", "CodeMirror", "TypeScript"],
+      "Comprehensive digital courseware platform blending structured documentation curriculum with in-browser interactive coding sandboxes and multimedia learning.",
+    role: "Frontend Engineer & UI Architect",
+    keyFeature:
+      "Dual Learner/Instructor dashboards with Role-Based Access Control (RBAC) and Fumadocs-powered visual lesson authoring.",
+    tags: ["Next.js", "React", "TypeScript", "Fumadocs", "Supabase", "Zustand", "Tailwind CSS"],
+    visit: "https://github.com/Flashdaniel",
     source: "https://github.com/Flashdaniel",
-    visit: "https://markdown-exa.netlify.app/",
+    image:
+      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
     id: 2,
   },
   {
-    title: "Bejamas Modern Storefront",
-    subtitle: "Responsive E-Commerce Catalog with Slide-Out Cart",
+    slug: "campushq",
+    title: "CampusHQ",
+    badge: "SaaS Product Concept",
+    badgeType: "saas",
     description:
-      "A responsive e-commerce storefront engineered with React and Tailwind CSS. Features dynamic product filtering, category sorting, an interactive slide-out cart drawer with real-time price calculations, and an optimized mobile-first checkout flow.",
-    highlights: [
-      "Dynamic category filtering and price sorting mechanisms",
-      "Interactive slide-out shopping cart drawer with live state",
-      "Mobile-first responsive layout tested across screen viewports",
-    ],
+      "Multi-tenant school operations ERP SaaS concept for academic record tracking, automated grade computation, and tuition fee billing portals.",
+    role: "Product & Frontend Engineer",
+    keyFeature:
+      "Offline-resilient PWA architecture with Service Worker caching and IndexedDB sync for uninterrupted school operations during network blackouts.",
+    tags: ["React", "TypeScript", "Vite", "Supabase", "PWA", "Tailwind CSS"],
+    visit: "https://github.com/Flashdaniel",
+    source: "https://github.com/Flashdaniel",
     image:
-      "https://efficient-coral-joan02iger.edgeone.app/Screenshot%202025-12-31%20at%2014-16-19%20BEJAMAS_.png",
-    tags: ["React", "Tailwind CSS", "JavaScript", "Responsive UI"],
-    source:
-      "https://github.com/Flashdaniel/altschool-semester-2-assignment-3-bejamas_",
-    visit: "https://bejamas-pro.netlify.app/",
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
     id: 3,
+  },
+  {
+    slug: "audiophile",
+    title: "Audiophile E-Commerce",
+    badge: "Modern E-Commerce",
+    badgeType: "ecommerce",
+    description:
+      "Production-grade high-fidelity audio equipment storefront engineered with reactive state management, product showcases, and a multi-step checkout flow.",
+    role: "Frontend Developer",
+    keyFeature:
+      "Real-time cart state synchronization with Convex database subscriptions and accessible multi-step form-validated checkout.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Convex", "Radix UI"],
+    visit: "https://bespoke-wisp-2d4be3.netlify.app/",
+    source: "https://github.com/Flashdaniel/hng-audiophile",
+    image:
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    id: 4,
   },
 ];
 
@@ -60,6 +76,26 @@ export const projects = featuredProjects;
 
 export const otherProjects = [
   {
+    title: "Markdown Studio Pro",
+    category: "Developer Workspace",
+    description:
+      "A desktop-grade web Markdown editor and document workspace built with React, Vite, Tailwind CSS, shadcn/ui, and CodeMirror. Delivers instant AST preview parsing, syntax highlighting, local document persistence, and multi-format document exporting.",
+    tags: ["React", "shadcn/ui", "Tailwind CSS", "Vite", "CodeMirror"],
+    source: "https://github.com/Flashdaniel",
+    visit: "https://markdown-exa.netlify.app/",
+    id: 5,
+  },
+  {
+    title: "Bejamas Modern Storefront",
+    category: "Storefront UI",
+    description:
+      "A responsive e-commerce storefront engineered with React and Tailwind CSS. Features dynamic product filtering, category sorting, an interactive slide-out cart drawer with real-time price calculations, and an optimized mobile-first checkout flow.",
+    tags: ["React", "Tailwind CSS", "JavaScript", "Responsive UI"],
+    source: "https://github.com/Flashdaniel/altschool-semester-2-assignment-3-bejamas_",
+    visit: "https://bejamas-pro.netlify.app/",
+    id: 6,
+  },
+  {
     title: "TicketFlow Support Portal",
     category: "Support Operations",
     description:
@@ -67,7 +103,7 @@ export const otherProjects = [
     tags: ["React", "State Management", "REST APIs", "Modern CSS"],
     source: "https://github.com/Flashdaniel/hng-ticket-app-react",
     visit: "https://hng-ticket-app-react.netlify.app/",
-    id: 4,
+    id: 7,
   },
   {
     title: "Light Visual Product Experience",
@@ -77,7 +113,7 @@ export const otherProjects = [
     tags: ["JavaScript", "Modern CSS", "HTML5", "Performance"],
     source: "https://github.com/Flashdaniel/Light-visual-landing-page",
     visit: "https://flashdaniel.github.io/Light-visual-landing-page/",
-    id: 5,
+    id: 8,
   },
 ];
 

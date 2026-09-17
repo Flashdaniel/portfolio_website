@@ -1,24 +1,27 @@
 import React from 'react';
-import { AiFillGithub, AiOutlineEye, AiOutlineCheckCircle } from 'react-icons/ai';
+import Link from 'next/link';
+import { AiFillGithub, AiOutlineEye, AiOutlineFileText } from 'react-icons/ai';
 
 import {
   BlogCard,
   CardBody,
+  CardHeader,
   CardInfo,
+  CaseStudyLink,
   GridContainer,
   HeaderThree,
-  Subtitle,
-  Hr,
   Img,
   ImgContainer,
   LiveDemoLink,
+  ProjectBadge,
   SourceCodeLink,
-  HighlightsList,
-  HighlightItem,
-  StackTitle,
+  SpecsBox,
+  SpecRow,
+  SpecLabel,
+  SpecValue,
   Tag,
   TagList,
-  TitleContent,
+  TechSection,
   UtilityList,
 } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle, SectionText } from '../../styles/GlobalComponents';
@@ -27,14 +30,14 @@ import { featuredProjects } from '../../constants/constants';
 const Projects = () => (
   <Section nopadding id="projects">
     <SectionDivider />
-    <SectionTitle main>Strongest Real Projects</SectionTitle>
+    <SectionTitle main>Featured Projects</SectionTitle>
     <SectionText>
-      Selected production-grade web applications demonstrating component architecture, client-side state management, and modern frontend engineering.
+      High-impact engineering projects prioritizing responsive design, robust state management, and production-grade architectures.
     </SectionText>
     <GridContainer>
       {featuredProjects.map((p) => {
         return (
-          <BlogCard key={p.id}>
+          <BlogCard key={p.id} isProminent={p.isProminent}>
             <ImgContainer>
               <Img
                 src={p.image}
@@ -43,55 +46,72 @@ const Projects = () => (
               />
             </ImgContainer>
             <CardBody>
-              <TitleContent>
+              {/* 1. Project Name */}
+              <CardHeader>
                 <HeaderThree>{p.title}</HeaderThree>
-                {p.subtitle && <Subtitle>{p.subtitle}</Subtitle>}
-                <Hr />
-              </TitleContent>
+                {p.badge && (
+                  <ProjectBadge type={p.badgeType}>
+                    {p.badgeType === 'commercial' && <span className="pulse-dot" aria-hidden="true" />}
+                    <span>{p.badge}</span>
+                  </ProjectBadge>
+                )}
+              </CardHeader>
+
+              {/* 2. Short Description */}
               <CardInfo>{p.description}</CardInfo>
 
-              {p.highlights && (
-                <HighlightsList>
-                  {p.highlights.map((h, i) => (
-                    <HighlightItem key={i}>
-                      <AiOutlineCheckCircle size="1.4rem" aria-hidden="true" />
-                      <span>{h}</span>
-                    </HighlightItem>
-                  ))}
-                </HighlightsList>
-              )}
+              {/* 3 & 5. My Role & Key Feature */}
+              <SpecsBox>
+                <SpecRow>
+                  <SpecLabel>My Role</SpecLabel>
+                  <SpecValue>{p.role}</SpecValue>
+                </SpecRow>
+                <SpecRow>
+                  <SpecLabel>Key Feature</SpecLabel>
+                  <SpecValue>{p.keyFeature}</SpecValue>
+                </SpecRow>
+              </SpecsBox>
 
-              <div>
-                <StackTitle>Technologies</StackTitle>
+              {/* 4. Technology */}
+              <TechSection>
+                <span className="tech-label">Technology</span>
                 <TagList>
-                  {p.tags.map((t, idx) => {
-                    return <Tag key={idx}>{t}</Tag>;
-                  })}
+                  {p.tags.map((t, idx) => (
+                    <Tag key={idx}>{t}</Tag>
+                  ))}
                 </TagList>
-              </div>
+              </TechSection>
+
+              {/* Case Study + 6 & 7. Live Demo & GitHub */}
               <UtilityList>
-                {p.visit && (
-                  <LiveDemoLink
-                    href={p.visit}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View live demo of ${p.title}`}
-                  >
-                    <AiOutlineEye size="1.8rem" aria-hidden="true" />
-                    <span>Live Demo</span>
-                  </LiveDemoLink>
+                {p.slug && (
+                  <Link href={`/projects/${p.slug}`} passHref>
+                    <CaseStudyLink aria-label={`Read engineering case study for ${p.title}`}>
+                      <AiOutlineFileText size="1.5rem" aria-hidden="true" />
+                      <span>Case Study</span>
+                    </CaseStudyLink>
+                  </Link>
                 )}
-                {p.source && (
-                  <SourceCodeLink
-                    href={p.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`View GitHub source code for ${p.title}`}
-                  >
-                    <AiFillGithub size="1.8rem" aria-hidden="true" />
-                    <span>Source Code</span>
-                  </SourceCodeLink>
-                )}
+
+                <LiveDemoLink
+                  href={p.visit}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View Live Demo for ${p.title}`}
+                >
+                  <AiOutlineEye size="1.5rem" aria-hidden="true" />
+                  <span>Live Demo</span>
+                </LiveDemoLink>
+
+                <SourceCodeLink
+                  href={p.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View GitHub repository for ${p.title}`}
+                >
+                  <AiFillGithub size="1.5rem" aria-hidden="true" />
+                  <span>GitHub</span>
+                </SourceCodeLink>
               </UtilityList>
             </CardBody>
           </BlogCard>
@@ -102,4 +122,5 @@ const Projects = () => (
 );
 
 export default Projects;
+
 

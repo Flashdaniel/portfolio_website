@@ -19,6 +19,7 @@ import {
   HeroActions,
   HeroBtnPrimary,
   HeroBtnSecondary,
+  HeroBtnLinkedIn,
   QuickLinksRow,
   QuickLinkItem,
   TechPillsRow,
@@ -61,10 +62,29 @@ const Hero = () => (
           <AiOutlineDownload size="1.8rem" aria-hidden="true" />
           <span>Download CV</span>
         </HeroBtnSecondary>
+        <HeroBtnLinkedIn
+          href="https://www.linkedin.com/in/daniel-nweze-017909214/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Connect with Daniel Nweze on LinkedIn (opens in new tab)"
+        >
+          <AiFillLinkedin size="1.8rem" aria-hidden="true" />
+          <span>LinkedIn</span>
+        </HeroBtnLinkedIn>
       </HeroActions>
 
       <QuickLinksRow aria-label="Quick contact and profile links">
-        <span className="label">Connect:</span>
+        <span className="label">Recruiter Quick Links:</span>
+        <QuickLinkItem
+          href="https://www.linkedin.com/in/daniel-nweze-017909214/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Daniel Nweze's LinkedIn profile (opens in new tab)"
+          highlight
+        >
+          <AiFillLinkedin size="1.8rem" aria-hidden="true" />
+          <span>LinkedIn Profile ↗</span>
+        </QuickLinkItem>
         <QuickLinkItem
           href="https://github.com/Flashdaniel/"
           target="_blank"
@@ -73,15 +93,6 @@ const Hero = () => (
         >
           <AiFillGithub size="1.8rem" aria-hidden="true" />
           <span>GitHub</span>
-        </QuickLinkItem>
-        <QuickLinkItem
-          href="https://www.linkedin.com/in/daniel-nweze-017909214/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn profile (opens in new tab)"
-        >
-          <AiFillLinkedin size="1.8rem" aria-hidden="true" />
-          <span>LinkedIn</span>
         </QuickLinkItem>
         <QuickLinkItem
           href="mailto:flashdaniel0@gmail.com"

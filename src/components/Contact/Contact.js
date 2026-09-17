@@ -4,6 +4,7 @@ import {
   AiOutlinePhone,
   AiOutlineCheck,
   AiOutlineCopy,
+  AiFillLinkedin,
 } from 'react-icons/ai';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
@@ -21,6 +22,7 @@ import {
   ContactActions,
   CopyEmailButton,
   MailtoLink,
+  LinkedInButton,
   ContactRight,
   InfoItem,
 } from './ContactStyles';
@@ -29,6 +31,7 @@ const Contact = () => {
   const [copied, setCopied] = useState(false);
   const email = 'flashdaniel0@gmail.com';
   const phone = '+234 810 076 7459';
+  const linkedin = 'https://www.linkedin.com/in/daniel-nweze-017909214/';
 
   const handleCopy = () => {
     if (navigator.clipboard) {
@@ -77,10 +80,37 @@ const Contact = () => {
               <AiOutlineMail size="1.8rem" aria-hidden="true" />
               <span>Send Direct Email</span>
             </MailtoLink>
+            <LinkedInButton
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Connect with Daniel Nweze on LinkedIn (opens in new tab)"
+            >
+              <AiFillLinkedin size="1.8rem" aria-hidden="true" />
+              <span>Connect on LinkedIn</span>
+            </LinkedInButton>
           </ContactActions>
         </ContactLeft>
 
         <ContactRight>
+          <InfoItem>
+            <div className="icon" aria-hidden="true" style={{ background: 'rgba(10, 102, 194, 0.15)', color: '#38bdf8' }}>
+              <AiFillLinkedin size="2.2rem" />
+            </div>
+            <div className="content">
+              <span className="label">LinkedIn Profile</span>
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="value"
+                aria-label="Open Daniel Nweze's LinkedIn profile in a new tab"
+              >
+                daniel-nweze-017909214 ↗
+              </a>
+            </div>
+          </InfoItem>
+
           <InfoItem>
             <div className="icon" aria-hidden="true">
               <AiOutlineMail size="2.2rem" />

@@ -105,6 +105,35 @@ export const MailtoLink = styled.a`
   }
 `;
 
+export const LinkedInButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1.2rem 2.2rem;
+  background: #0a66c2;
+  border: 1px solid #0a66c2;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+
+  &:hover {
+    background: #004182;
+    border-color: #004182;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 102, 194, 0.5);
+    color: #ffffff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+  }
+`;
+
 export const ContactRight = styled.div`
   display: flex;
   flex-direction: column;

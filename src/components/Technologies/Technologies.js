@@ -1,9 +1,9 @@
 import React from "react";
 import {
   AiOutlineCode,
-  AiOutlineLayout,
   AiOutlineDatabase,
   AiOutlineTool,
+  AiOutlineApartment,
 } from "react-icons/ai";
 import {
   Section,
@@ -12,79 +12,109 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import {
-  TechGrid,
-  TechCard,
-  TechCardHeader,
-  TechIconBadge,
-  TechCardTitle,
-  TechDescription,
-  SkillTagsContainer,
-  SkillTag,
+  SkillsGrid,
+  SkillCategoryCard,
+  CategoryHeader,
+  CategoryTitleGroup,
+  CategoryIconBadge,
+  CategoryTitle,
+  SkillCountBadge,
+  SkillsList,
+  SkillChip,
 } from "./TechnologiesStyles";
 
-const domains = [
+const skillGroups = [
   {
-    title: "Core & Frameworks",
+    category: "Frontend",
     icon: <AiOutlineCode size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #13adc7 0%, #2563eb 100%)",
-    description:
-      "Developing resilient, component-driven client applications using modern JavaScript and TypeScript with performance-first architectures.",
-    skills: ["React", "TypeScript", "JavaScript (ES6+)", "Next.js", "Vite", "HTML5 & Semantic Web"],
+    gradient: "linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)",
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
   },
   {
-    title: "Styling & UI Architecture",
-    icon: <AiOutlineLayout size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #945dd6 0%, #ec4899 100%)",
-    description:
-      "Crafting accessible, scalable design systems, responsive multi-breakpoint layouts, and smooth micro-interactions.",
-    skills: ["Tailwind CSS", "shadcn/ui", "Styled Components", "Modern CSS", "Web Accessibility (WCAG)", "Responsive UI"],
-  },
-  {
-    title: "State & Data Layer",
+    category: "State & Data",
     icon: <AiOutlineDatabase size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
-    description:
-      "Managing complex client-side state, server caching, error handling, and declarative API integrations.",
-    skills: ["Zustand", "TanStack Query", "REST APIs", "Context API", "Convex", "Data Fetching & Cache"],
+    gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)",
+    skills: [
+      "Zustand",
+      "TanStack Query",
+      "REST APIs",
+      "Supabase",
+      "Convex",
+      "Firebase",
+    ],
   },
   {
-    title: "Services & Tooling",
+    category: "Tools",
     icon: <AiOutlineTool size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #10b981 0%, #13adc7 100%)",
-    description:
-      "Leveraging modern developer tooling, version control workflows, cloud backends, and browser performance instrumentation.",
-    skills: ["Git", "GitHub", "Supabase", "Firebase", "Chrome DevTools", "VS Code"],
+    gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
+    skills: [
+      "Git",
+      "GitHub",
+      "Vite",
+      "ESLint",
+      "GitHub Actions",
+      "Docker",
+    ],
+  },
+  {
+    category: "Engineering",
+    icon: <AiOutlineApartment size="2.4rem" aria-hidden="true" />,
+    gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
+    skills: [
+      "Responsive Design",
+      "Accessibility",
+      "Performance Optimization",
+      "Component Architecture",
+      "API Integration",
+      "Agile/Scrum",
+      "SDLC",
+      "Technical Documentation",
+    ],
   },
 ];
 
 const Technologies = () => (
   <Section id="skills">
     <SectionDivider divider />
-    <SectionTitle>Engineering Skills</SectionTitle>
+    <SectionTitle>Technical Skills</SectionTitle>
     <SectionText>
-      Core technologies, architectural frameworks, and engineering tools utilized daily to build production-grade web applications.
+      Core technologies, state management architectures, developer tools, and engineering methodologies utilized to design and ship reliable, production-grade web software.
     </SectionText>
-    <TechGrid>
-      {domains.map((domain, index) => (
-        <TechCard key={index}>
-          <TechCardHeader>
-            <TechIconBadge gradient={domain.gradient}>
-              {domain.icon}
-            </TechIconBadge>
-            <TechCardTitle>{domain.title}</TechCardTitle>
-          </TechCardHeader>
-          <TechDescription>{domain.description}</TechDescription>
-          <SkillTagsContainer>
-            {domain.skills.map((skill, idx) => (
-              <SkillTag key={idx}>{skill}</SkillTag>
+
+    <SkillsGrid>
+      {skillGroups.map((group, index) => (
+        <SkillCategoryCard key={index}>
+          <CategoryHeader>
+            <CategoryTitleGroup>
+              <CategoryIconBadge gradient={group.gradient}>
+                {group.icon}
+              </CategoryIconBadge>
+              <CategoryTitle>{group.category}</CategoryTitle>
+            </CategoryTitleGroup>
+            <SkillCountBadge>{group.skills.length} Skills</SkillCountBadge>
+          </CategoryHeader>
+
+          <SkillsList aria-label={`${group.category} skills`}>
+            {group.skills.map((skill, idx) => (
+              <SkillChip key={idx}>
+                <span className="chip-dot" aria-hidden="true" />
+                <span>{skill}</span>
+              </SkillChip>
             ))}
-          </SkillTagsContainer>
-        </TechCard>
+          </SkillsList>
+        </SkillCategoryCard>
       ))}
-    </TechGrid>
-    <SectionDivider colorAlt />
+    </SkillsGrid>
   </Section>
 );
 
 export default Technologies;
-
