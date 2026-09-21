@@ -66,7 +66,7 @@ const milestones = [
 
 const About = () => {
   return (
-    <Section id="about">
+    <Section id="about" aria-label="About Me &amp; Engineering Journey">
       <SectionDivider divider />
       <SectionTitle>About Me</SectionTitle>
 
@@ -104,7 +104,7 @@ const About = () => {
           {milestones.map((m, idx) => (
             <MilestoneCard key={idx}>
               <span className="period">{m.period}</span>
-              <span className="title">{m.title}</span>
+              <h4 className="title">{m.title}</h4>
               <span className="detail">{m.detail}</span>
             </MilestoneCard>
           ))}

@@ -21,7 +21,7 @@ import { educationData } from '../../constants/constants';
 
 const Education = () => {
   return (
-    <Section id="education">
+    <Section id="education" aria-label="Education &amp; Technical Foundation">
       <SectionDivider divider />
       <SectionTitle>Education &amp; Technical Foundation</SectionTitle>
       <SectionText>
@@ -40,7 +40,7 @@ const Education = () => {
               <CredentialName>{item.credential}</CredentialName>
             </div>
             <EducationDescription>{item.description}</EducationDescription>
-            <FocusTagsContainer>
+            <FocusTagsContainer aria-label={`Key focus areas for ${item.institution}`}>
               {item.focusAreas.map((tag, idx) => (
                 <FocusTag key={idx}>{tag}</FocusTag>
               ))}

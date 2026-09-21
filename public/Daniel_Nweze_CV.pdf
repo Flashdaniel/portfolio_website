@@ -1,69 +1,74 @@
 %PDF-1.4
-%âãÏÓ
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Length 3149 >>
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260915195604+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260915195604+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2294
+>>
 stream
-BT /F2 20 Tf 50 750 Td (DANIEL NWEZE) Tj ET
-BT /F2 13 Tf 50 730 Td (FRONTEND ENGINEER) Tj ET
-BT /F1 10 Tf 50 712 Td (Lagos, Nigeria | flashdaniel0@gmail.com | +234 810 076 7459) Tj ET
-BT /F1 9 Tf 50 698 Td (GitHub: github.com/Flashdaniel | LinkedIn: linkedin.com/in/daniel-nweze-017909214 | X: @iamflashdaniel) Tj ET
-BT /F2 12 Tf 50 672 Td (PROFESSIONAL SUMMARY) Tj ET
-BT /F1 10 Tf 50 656 Td (Frontend Engineer building accessible, scalable, and user-focused digital products. Skilled in React, TypeScript,) Tj ET
-BT /F1 10 Tf 50 642 Td (Next.js, and modern CSS architectures. Bridges engineering rigor with thoughtful UI design, state management) Tj ET
-BT /F1 10 Tf 50 628 Td (\(Zustand, TanStack Query\), web accessibility \(WCAG\), and responsive client-side performance.) Tj ET
-BT /F2 12 Tf 50 602 Td (CORE TECHNICAL SKILLS) Tj ET
-BT /F1 10 Tf 50 586 Td (Frontend & Frameworks: React, TypeScript, Next.js, JavaScript \(ES6+\), Vite, HTML5, Semantic Web) Tj ET
-BT /F1 10 Tf 50 572 Td (Styling & UI Architecture: Tailwind CSS, shadcn/ui, Styled Components, Modern CSS, Responsive Design, WCAG) Tj ET
-BT /F1 10 Tf 50 558 Td (State Management & APIs: Zustand, TanStack Query, REST APIs, Context API, Convex) Tj ET
-BT /F1 10 Tf 50 544 Td (Tools & Cloud Services: Git, GitHub, Supabase, Firebase, Chrome DevTools, VS Code) Tj ET
-BT /F2 12 Tf 50 518 Td (FEATURED ENGINEERING PROJECTS) Tj ET
-BT /F2 10 Tf 50 502 Td (Audiophile E-Commerce Platform | Next.js, React, TypeScript, Convex, Tailwind CSS, Radix UI) Tj ET
-BT /F1 9.5 Tf 60 488 Td (- Engineered a high-performance audio equipment e-commerce web platform with dynamic cart state management.) Tj ET
-BT /F1 9.5 Tf 60 474 Td (- Implemented responsive product showcases, checkout validation, and fast server-rendered pages.) Tj ET
-BT /F2 10 Tf 50 452 Td (Markdown Studio Pro | React, Vite, Tailwind CSS, shadcn/ui, CodeMirror) Tj ET
-BT /F1 9.5 Tf 60 438 Td (- Built an interactive Markdown workspace with live preview, syntax highlighting, and local state persistence.) Tj ET
-BT /F1 9.5 Tf 60 424 Td (- Designed responsive split-pane interface and multi-format document exporting.) Tj ET
-BT /F2 10 Tf 50 402 Td (Bejamas E-Commerce Storefront | React, Tailwind CSS, JavaScript) Tj ET
-BT /F1 9.5 Tf 60 388 Td (- Developed responsive storefront with dynamic product filtering, slide-out cart drawer, and mobile-first UX.) Tj ET
-BT /F2 10 Tf 50 366 Td (TicketFlow Support Portal | React, State Management, REST APIs) Tj ET
-BT /F1 9.5 Tf 60 352 Td (- Customer support ticket management app with real-time status updates and state persistence.) Tj ET
-BT /F2 12 Tf 50 326 Td (EDUCATION & CERTIFICATIONS) Tj ET
-BT /F2 10 Tf 50 310 Td (Diploma in Software Engineering \(Frontend\) - AltSchool Africa) Tj ET
-BT /F2 10 Tf 50 294 Td (B.Eng in Agricultural & Bioresources Engineering - University of Nigeria, Nsukka) Tj ET
-BT /F2 10 Tf 50 278 Td (CS50: Introduction to Computer Science - Harvard University) Tj ET
-0.8 0.8 0.8 RG 1 w 50 724 m 550 724 l S
-0.8 0.8 0.8 RG 1 w 50 666 m 550 666 l S
-0.8 0.8 0.8 RG 1 w 50 596 m 550 596 l S
-0.8 0.8 0.8 RG 1 w 50 512 m 550 512 l S
-0.8 0.8 0.8 RG 1 w 50 320 m 550 320 l S
-endstream
+Gatm<?$Dc-&:Mm.R&;"7Q.CJ=55J61E3*#9'S2a\-SI!WOuDGQ]3n,lq=1"]5f0dB;nL)j2R(Bmgpo4bAhh-;+&i1K@t</3S6qXk=qGMcm#sU91[out?XK5Obe?M8[a?&3E,:ZnE.kFRW1c`#p(]2f*nDSp">MNBJN6]]\E$14BT>R#*9/@M"D]ud3:j+.KDA%+Dsq<E^-M/qFRRL@'0b@#.5OH,-d<L[B&JipMQo(6h]qj)5HKgR=MCC4hL#C]r69?OGt[oB9@%S[r#bjEn9fF??)X7'pF.5'rM-'1ep53\ThYBkTg.2-rR=>]>J8F_>\I79?El4-II4Zc*LtCMQ3g<OM(DDC#!]s$UanH3I>:Nbj_dd+c6D<CD+o4C_DK8`LaUejbnG5HcBIj?:,f^ps0/Y7%`cTA1Aa%NbO]#EdaKh/Mr?qm%?dqXigW*)=a"c(>mucRA'd:uirR_#8(OaDCM/Req[:aEVsifo%/d/Mn!rKHp%FI5f,G=>H?;AMHT]k#*tgqf*95#h]3^:Ma]X4WOtBHH'<k'G6F&JE$*4ITTj+u;7Z8Z7TOGp;jK")Z5VSV&M<$U?NUoRtA@R`:(N7t6cufp2C!L]*!Uj6IXKj*NUIYEK9>eCEDs7`(6btRk%e^d@YNP7V:;4eE%K@tSf1[H/2$LOW3K%GRSAc1%m^O!XQO^+MWn8MMD$P$h9e'V0)kt^cDTsHa-J^fOL:@lc3/^mtp?G]c\:kK=([WA6D[=',EeQPM&LEFJ\#G27+Oa&69*KrAV!B5KV-<\&iPAMLU_-$+e^K$h^e<+-:M]G6T5ET.qm>jY;fD)M/[dJ@A99SV9r0?0+^!6[FT<F\2V9aob2bF@,4IB,1AGZg6T>5"K\`j\73?29RR)1QM.[^W!9Xk.(f*]=M8X<5^_i6.okXVdP,R7\hCn,.jm\Ig`d<8hPUl8HanBGL#3-<#+'4':]T\3Jfc1L<Xi$:#@,06a?'d0D&Idpd@(2#9E2MGB^"%sA8"baa*,#iVW+lp+K@(O$mq"2Q&@en][FV9E()o)$-Pb]o-8M=k0o=$U/k6*B>&^2,=/n4.H5>X`(DCu*LCL#(+^-2I?t9i7KeuLS*F_Nr)Mkc[Tj3l6Y@r0_-6W4*?3<Yqe*%"XR5TaV6*W$7CJuJs*fY\C=gS8h7(ZesS=;trAuUN^@8rid<.pLeZ)VnZc"&YsWch>U1h3oq1;c[DA._NKXjeF4>RH,A+NCfq7u1O=gV=erAGf@)@`3ugYNm-gGeR6&9'aZI'dZfn@4=gc4h`7@.@!Q/F,Y,s*2iQYqiBGqk`;?fnppH2hTU$CDZX#DhVsgXAi#'uShHN^j96<=U^:Xl$:Q<n0P?Z?:'tZ?eEc,O/GL#M9JHrpcn@/cU(Y0;G9QQIKma(qcQn,Z7_n?$Hq+MO'A,ar>[XA*!dd;F>GY<#dCf$YU!ts::r,,h7D;EK%VFSe$2,85=^4?TO0L^AjjO"!:AH_U?%mB+KjC/JYq0?KT/2hR=WoF_PQfbOGA.u34.=Nu(=U=g42KXC=Ikq?/Nu3I0UPWWCKf4$,sI2=HL/+OM8uOD`u\8HI?`*ieaRaG:)_P<Mg:,Q)lEJRL,#Yb(jV<+mpf=%e]*o^V4.pc2HY1@L!1^9=Xarq?%O#D@Qg>JVc`OIgF6S$\o&G,9SBKQY2NOJQD=8Ymrq`4EPoLRD6?%1M=EeU(A8f/WWim$nC%#b5#sKpV7D^\T,=Kl$=CrTmf2Tji/hW>Ii6N$->DLh)c+sZi-@Rp"4+ZN:L/)sqdV[V[?+I:fH]G>;dFUn^R_%,iq1$+1F8)0.enDRq1E$=s4i1Ki8)WF..2FHL4\4.FdS[8]EP#qT+%?A9^m,']D;iYkp]Ssga`I?S/YePLB9O;$t7HmFSjRPRPKQ$E*sohT!U3/[`RJ'KQtNYkEPXXG^b[fQc5tj7F.TGeaer#_9pYf(a^^*ImR`/+X&140BLu+58M;2UBS=0i.6qC/^H[3ST+I)i7p@2_%GW9dHM"jWU'ihE$X>81nA.O'es_dRCPj8$[2nIM,q-I?![n$^&CA@Q#qnDCFiJW2OKq<\P@[q?jnsF>6`Q7BmJS_CFu%J?6ITl?<(!<,7sO=6Al(+^]&o5Lo-C4IIF4qWcd2V&J<3kLjb%B0ar<5E8V_+DPW`fAs:pM.\?L]k6K3W'fT5^i@7]a3hFgp-!8d.NK]I.@6C(.e6uBd_/l_DpQPiS!O%LU]t3Ag4`8n*l')6![Od1[Fq#fTir3#cW^/[pmD()Ne)pEgo'olUl/D-q#N5+:?^%3>+T~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000015 00000 n 
-0000000064 00000 n 
-0000000121 00000 n 
-0000000257 00000 n 
-0000000327 00000 n 
-0000000402 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000872 00000 n 
+0000000931 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<a24078089273842297ed3c8e339676fa><a24078089273842297ed3c8e339676fa>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-3603
+3316
 %%EOF

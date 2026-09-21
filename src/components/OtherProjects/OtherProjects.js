@@ -22,7 +22,7 @@ import { otherProjects } from '../../constants/constants';
 
 const OtherProjects = () => {
   return (
-    <Section id="other-projects">
+    <Section id="other-projects" aria-label="Other Projects &amp; Explorations">
       <SectionDivider divider />
       <SectionTitle>Other Projects &amp; Explorations</SectionTitle>
       <SectionText>
@@ -48,7 +48,7 @@ const OtherProjects = () => {
                   href={project.visit}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View live demo of ${project.title}`}
+                  aria-label={`View live demo of ${project.title} (opens in new tab)`}
                 >
                   <AiOutlineEye size="1.6rem" aria-hidden="true" />
                   <span>Live Demo</span>
@@ -59,7 +59,7 @@ const OtherProjects = () => {
                   href={project.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View GitHub source code for ${project.title}`}
+                  aria-label={`View GitHub source code for ${project.title} (opens in new tab)`}
                 >
                   <AiFillGithub size="1.6rem" aria-hidden="true" />
                   <span>Source Code</span>

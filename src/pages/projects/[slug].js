@@ -98,7 +98,7 @@ export default function CaseStudyPage({ caseStudy }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 primary
-                aria-label={`Open Live Demo for ${caseStudy.title}`}
+                aria-label={`Open Live Demo for ${caseStudy.title} (opens in new tab)`}
               >
                 <AiOutlineEye size="1.8rem" aria-hidden="true" />
                 <span>Live Demo</span>
@@ -109,7 +109,7 @@ export default function CaseStudyPage({ caseStudy }) {
                 href={caseStudy.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Open GitHub Repository for ${caseStudy.title}`}
+                aria-label={`Open GitHub Repository for ${caseStudy.title} (opens in new tab)`}
               >
                 <AiFillGithub size="1.8rem" aria-hidden="true" />
                 <span>GitHub</span>
@@ -206,7 +206,7 @@ export default function CaseStudyPage({ caseStudy }) {
               <ProblemSolutionCard key={index}>
                 <div className="block">
                   <span className="badge-label problem">Challenge #{index + 1}</span>
-                  <h4>{c.challenge}</h4>
+                  <h3>{c.challenge}</h3>
                   <p>{c.description}</p>
                 </div>
                 {sol && (
@@ -252,7 +252,7 @@ export default function CaseStudyPage({ caseStudy }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 primary
-                aria-label={`Open Live Demo for ${caseStudy.title}`}
+                aria-label={`Open Live Demo for ${caseStudy.title} (opens in new tab)`}
               >
                 <AiOutlineEye size="1.8rem" aria-hidden="true" />
                 <span>Visit Live Platform / Demo</span>
@@ -263,7 +263,7 @@ export default function CaseStudyPage({ caseStudy }) {
                 href={caseStudy.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Open GitHub Repository for ${caseStudy.title}`}
+                aria-label={`Open GitHub Repository for ${caseStudy.title} (opens in new tab)`}
               >
                 <AiFillGithub size="1.8rem" aria-hidden="true" />
                 <span>View Source Code on GitHub</span>
@@ -274,7 +274,7 @@ export default function CaseStudyPage({ caseStudy }) {
 
         <CaseStudyFooterNav>
           <Link href="/#projects" passHref>
-            <BackLink>
+            <BackLink aria-label="Back to All Featured Projects">
               <AiOutlineArrowLeft size="1.6rem" aria-hidden="true" />
               <span>Back to All Featured Projects</span>
             </BackLink>
@@ -290,7 +290,7 @@ export default function CaseStudyPage({ caseStudy }) {
               <span>Connect on LinkedIn</span>
             </CaseStudyActionBtn>
             <Link href="/#contact" passHref>
-              <CaseStudyActionBtn primary>
+              <CaseStudyActionBtn primary aria-label="Discuss This Project - Jump to Contact form">
                 <span>Discuss This Project</span>
               </CaseStudyActionBtn>
             </Link>

@@ -1,31 +1,43 @@
 import styled from "styled-components"
 
-export const FooterWrapper = styled.section`
-	width: calc(100vw - 96px);
+export const FooterWrapper = styled.footer`
+  width: 100%;
   max-width: 1040px;
   padding: 2rem 48px 40px;
   margin: 1rem auto;
-  box-sizing: content-box;
+  box-sizing: border-box;
 
-
-  @media ${props => props.theme.breakpoints.sm} {
-    padding: 0 16px 48px;
-    width: calc(100vw - 32px);
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 2rem 28px 40px;
   }
-`
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 1.5rem 16px 48px;
+    width: 100%;
+  }
+
+  @media (max-width: 360px) {
+    padding: 1.5rem 12px 40px;
+  }
+`;
 
 export const LinkItem = styled.a`
 	font-size: 18px;
 	line-height: 30px;
 	color: rgba(255, 255, 255, 0.75);
 	margin-bottom: 16px;
-	transition: .3s ease;
-	position: relative;
-	left: 0;
+	transition: color 0.2s ease, transform 0.2s ease;
 
 	&:hover {
 		color: #fff;
-		left: 6px;
+		transform: translateX(6px);
+	}
+
+	&:focus-visible {
+		outline: 2px solid #38bdf8;
+		outline-offset: 3px;
+		border-radius: 4px;
+		color: #ffffff;
 	}
 
 	@media ${props => props.theme.breakpoints.md} {
@@ -41,7 +53,7 @@ export const LinkItem = styled.a`
 		display: flex;
 		align-items: center;
 	}
-`
+`;
 
 export const SocialIconsContainer = styled.div`
 max-width: 1040px;
@@ -89,10 +101,10 @@ export const Slogan = styled.p`
 `
 
 export const Copyright = styled.p`
-	color: rgba(255, 255, 255, 0.4);
+	color: #94a3b8;
 	font-size: 1.3rem;
 	line-height: 20px;
-`
+`;
 
 export const SocialContainer = styled.div`
 	display: flex;
@@ -102,7 +114,7 @@ export const SocialContainer = styled.div`
 	@media ${props => props.theme.breakpoints.md}{
 		justify-content: center;
 	}
-`
+`;
 
 export const LinkList = styled.div`
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -120,19 +132,25 @@ export const LinkList = styled.div`
 		gap: 16px;
 		padding: 24px 0 16px;
 	}
-`
+`;
 
 export const LinkColumn = styled.div`
-	display: flex;
-	flex-direction: column;
-	min-width: 180px;
-`
-export const LinkTitle = styled.h4`
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+
+  @media (max-width: 480px) {
+    min-width: 100%;
+  }
+`;
+
+export const LinkTitle = styled.span`
+  display: block;
 	font-weight: 600;
-	font-size: 12px;
+	font-size: 1.2rem;
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.8px;
-	color: rgba(255, 255, 255, 0.45);
+	color: #94a3b8;
 	margin-bottom: 10px;
-`
+`;

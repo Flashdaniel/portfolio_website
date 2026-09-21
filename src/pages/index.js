@@ -5,10 +5,14 @@ import Experience from "../components/Experience/Experience";
 import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import Education from "../components/Education/Education";
+import About from "../components/About/About";
 import OtherProjects from "../components/OtherProjects/OtherProjects";
+import GitHub from "../components/GitHub/GitHub";
 import Contact from "../components/Contact/Contact";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
+
+import ScrollReveal from "../components/ScrollReveal/ScrollReveal";
 
 const Home = () => {
   return (
@@ -40,28 +44,48 @@ const Home = () => {
         <meta name="twitter:creator" content="@iamflashdaniel" />
       </Head>
 
-      {/* 1. Professional Identity */}
-      <Section nopadding>
-        <Hero />
-      </Section>
+      {/* 1. Professional Identity (Above the fold, instant render) */}
+      <Hero />
 
       {/* 2. Professional Experience */}
-      <Experience />
+      <ScrollReveal>
+        <Experience />
+      </ScrollReveal>
 
       {/* 3. Strongest Real Projects */}
-      <Projects />
+      <ScrollReveal>
+        <Projects />
+      </ScrollReveal>
 
       {/* 4. Engineering Skills */}
-      <Technologies />
+      <ScrollReveal>
+        <Technologies />
+      </ScrollReveal>
 
       {/* 5. Education */}
-      <Education />
+      <ScrollReveal>
+        <Education />
+      </ScrollReveal>
 
-      {/* 6. Other Projects */}
-      <OtherProjects />
+      {/* 6. About */}
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
 
-      {/* 7. Contact */}
-      <Contact />
+      {/* 7. Other Projects */}
+      <ScrollReveal>
+        <OtherProjects />
+      </ScrollReveal>
+
+      {/* 8. Open Source & GitHub */}
+      <ScrollReveal>
+        <GitHub />
+      </ScrollReveal>
+
+      {/* 9. Contact */}
+      <ScrollReveal>
+        <Contact />
+      </ScrollReveal>
     </Layout>
   );
 };

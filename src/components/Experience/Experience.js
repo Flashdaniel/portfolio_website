@@ -24,7 +24,7 @@ import {
 
 const Experience = () => {
   return (
-    <Section id="experience">
+    <Section id="experience" aria-label="Professional Experience">
       <SectionDivider divider />
       <SectionTitle>Professional Experience</SectionTitle>
       <SectionText>
@@ -50,7 +50,7 @@ const Experience = () => {
         <ProductBanner>
           <div className="product-info">
             <span className="label">Commercial Product Spotlight</span>
-            <span className="title">myRabbAi — AI-Powered CBT &amp; Exam Preparation</span>
+            <h4 className="title">myRabbAi — AI-Powered CBT &amp; Exam Preparation</h4>
             <span className="description">
               A high-impact educational technology platform delivering personalized computer-based test (CBT) practice, automated scoring, and study tools for JAMB, WAEC, and NECO students across Nigeria.
             </span>

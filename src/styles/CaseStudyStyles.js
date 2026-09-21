@@ -5,9 +5,14 @@ export const CaseStudyContainer = styled.article`
   margin: 0 auto;
   padding: 4rem 2rem 8rem;
   width: 100%;
+  box-sizing: border-box;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 2.4rem 1.6rem 6rem;
+  }
+
+  @media (max-width: 360px) {
+    padding: 2rem 1.2rem 5rem;
   }
 `;
 
@@ -20,11 +25,17 @@ export const BackLink = styled.a`
   color: #38bdf8;
   text-decoration: none;
   margin-bottom: 3.2rem;
+  min-height: 44px;
+  padding: 4px 0;
   transition: all 0.2s ease;
 
   &:hover {
     color: #ffffff;
     transform: translateX(-3px);
+  }
+
+  &:active {
+    transform: translateX(-1px);
   }
 `;
 
@@ -46,7 +57,7 @@ export const BadgeRow = styled.div`
   .timeline {
     font-size: 1.3rem;
     font-family: monospace;
-    color: #64748b;
+    color: #94a3b8;
   }
 `;
 
@@ -56,9 +67,15 @@ export const CaseStudyTitle = styled.h1`
   color: #ffffff;
   line-height: 1.2;
   letter-spacing: -0.5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 2.1rem;
   }
 `;
 
@@ -66,11 +83,12 @@ export const MetaSpecGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
-  background: #090f1d;
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 1.8rem 2rem;
   margin-top: 1rem;
+  box-sizing: border-box;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-template-columns: 1fr;
@@ -88,8 +106,9 @@ export const MetaItem = styled.div`
     font-size: 1.15rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.06em;
     color: #38bdf8;
+    font-family: monospace;
   }
 
   .value {
@@ -102,43 +121,68 @@ export const MetaItem = styled.div`
 export const ActionLinksBar = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.2rem;
   margin-top: 1.2rem;
   flex-wrap: wrap;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
 `;
 
 export const CaseStudyActionBtn = styled.a`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.4rem;
-  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 4px;
+  font-size: 1.35rem;
+  font-weight: 600;
   text-decoration: none;
+  min-height: 42px;
+  box-sizing: border-box;
   transition: all 0.2s ease;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 
   ${(props) =>
     props.primary
       ? `
-    background: #38bdf8;
-    color: #0b1120;
+    background: #f8fafc;
+    border: 1px solid #f8fafc;
+    color: #0a0e17;
     &:hover {
-      background: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+      background: #38bdf8;
+      border-color: #38bdf8;
+      color: #0a0e17;
+      transform: translateY(-1px);
     }
   `
       : `
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #f1f5f9;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #f8fafc;
     &:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.35);
-      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      transform: translateY(-1px);
     }
   `}
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+  }
 `;
 
 export const ContentSection = styled.section`
@@ -151,7 +195,7 @@ export const ContentSection = styled.section`
 export const SectionHeading = styled.h2`
   font-size: 2.2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #f8fafc;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -186,14 +230,14 @@ export const TechPillsWrapper = styled.div`
 `;
 
 export const TechPillItem = styled.span`
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-family: monospace;
   font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 6px;
-  background: #090f1d;
-  border: 1px solid #1e293b;
-  color: #38bdf8;
+  padding: 5px 12px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
 `;
 
 export const DecisionGrid = styled.div`
@@ -204,10 +248,10 @@ export const DecisionGrid = styled.div`
 `;
 
 export const DecisionCard = styled.div`
-  background: #090f1d;
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-left: 3px solid #38bdf8;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1.8rem 2rem;
   display: flex;
   flex-direction: column;
@@ -216,7 +260,7 @@ export const DecisionCard = styled.div`
   h3 {
     font-size: 1.7rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #f8fafc;
     margin: 0;
   }
 
@@ -240,9 +284,9 @@ export const FeatureGrid = styled.div`
 `;
 
 export const FeatureCard = styled.div`
-  background: #090f1d;
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1.8rem;
   display: flex;
   flex-direction: column;
@@ -251,7 +295,7 @@ export const FeatureCard = styled.div`
   h3 {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #f8fafc;
     margin: 0;
   }
 
@@ -264,9 +308,9 @@ export const FeatureCard = styled.div`
 `;
 
 export const ProblemSolutionCard = styled.div`
-  background: #090f1d;
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 2rem;
   margin-top: 1.2rem;
   display: grid;
@@ -286,19 +330,20 @@ export const ProblemSolutionCard = styled.div`
       font-size: 1.15rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.06em;
       padding: 2px 8px;
       border-radius: 4px;
       width: fit-content;
+      font-family: monospace;
 
       &.problem {
-        background: rgba(239, 68, 68, 0.12);
+        background: rgba(239, 68, 68, 0.1);
         color: #f87171;
         border: 1px solid rgba(239, 68, 68, 0.25);
       }
 
       &.solution {
-        background: rgba(34, 197, 94, 0.12);
+        background: rgba(34, 197, 94, 0.1);
         color: #4ade80;
         border: 1px solid rgba(34, 197, 94, 0.25);
       }
@@ -307,7 +352,7 @@ export const ProblemSolutionCard = styled.div`
     h4 {
       font-size: 1.55rem;
       font-weight: 700;
-      color: #ffffff;
+      color: #f8fafc;
       margin: 0;
     }
 
@@ -321,9 +366,10 @@ export const ProblemSolutionCard = styled.div`
 `;
 
 export const ResultBox = styled.div`
-  background: rgba(56, 189, 248, 0.06);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 10px;
+  background: rgba(56, 189, 248, 0.03);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-left: 3px solid #38bdf8;
+  border-radius: 4px;
   padding: 2.2rem 2.4rem;
   font-size: 1.55rem;
   line-height: 1.7;
@@ -335,9 +381,10 @@ export const ResultBox = styled.div`
 `;
 
 export const LessonsBox = styled.div`
-  background: #090f1d;
-  border-left: 3px solid #a855f7;
-  border-radius: 0 8px 8px 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid #38bdf8;
+  border-radius: 4px;
   padding: 2rem 2.2rem;
   font-size: 1.55rem;
   line-height: 1.7;
@@ -353,4 +400,14 @@ export const CaseStudyFooterNav = styled.footer`
   align-items: center;
   flex-wrap: wrap;
   gap: 1.6rem;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
 `;

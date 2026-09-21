@@ -28,7 +28,7 @@ import { Section, SectionDivider, SectionTitle, SectionText } from '../../styles
 import { featuredProjects } from '../../constants/constants';
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section id="projects" aria-label="Featured Projects">
     <SectionDivider />
     <SectionTitle main>Featured Projects</SectionTitle>
     <SectionText>
@@ -41,8 +41,11 @@ const Projects = () => (
             <ImgContainer>
               <Img
                 src={p.image}
-                alt={`Screenshot of ${p.title}`}
+                alt={`Screenshot of ${p.title} project interface highlighting ${p.keyFeature}`}
                 loading="lazy"
+                decoding="async"
+                width="640"
+                height="360"
               />
             </ImgContainer>
             <CardBody>
@@ -97,7 +100,7 @@ const Projects = () => (
                   href={p.visit}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View Live Demo for ${p.title}`}
+                  aria-label={`View Live Demo for ${p.title} (opens in new tab)`}
                 >
                   <AiOutlineEye size="1.5rem" aria-hidden="true" />
                   <span>Live Demo</span>
@@ -107,7 +110,7 @@ const Projects = () => (
                   href={p.source}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View GitHub repository for ${p.title}`}
+                  aria-label={`View GitHub repository for ${p.title} (opens in new tab)`}
                 >
                   <AiFillGithub size="1.5rem" aria-hidden="true" />
                   <span>GitHub</span>

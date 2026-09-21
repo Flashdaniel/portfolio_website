@@ -15,6 +15,7 @@ import {
   SkillsGrid,
   SkillCategoryCard,
   CategoryHeader,
+  CategoryIndex,
   CategoryTitleGroup,
   CategoryIconBadge,
   CategoryTitle,
@@ -25,24 +26,24 @@ import {
 
 const skillGroups = [
   {
-    category: "Frontend",
-    icon: <AiOutlineCode size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #38bdf8 0%, #2563eb 100%)",
+    index: "01 // FRONTEND",
+    category: "Frontend UI",
+    icon: <AiOutlineCode size="1.7rem" aria-hidden="true" />,
     skills: [
       "React",
       "Next.js",
       "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
       "Tailwind CSS",
       "shadcn/ui",
     ],
   },
   {
+    index: "02 // STATE & DATA",
     category: "State & Data",
-    icon: <AiOutlineDatabase size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #a855f7 0%, #ec4899 100%)",
+    icon: <AiOutlineDatabase size="1.7rem" aria-hidden="true" />,
     skills: [
       "Zustand",
       "TanStack Query",
@@ -53,9 +54,9 @@ const skillGroups = [
     ],
   },
   {
-    category: "Tools",
-    icon: <AiOutlineTool size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
+    index: "03 // TOOLING & CI",
+    category: "Tooling & CI",
+    icon: <AiOutlineTool size="1.7rem" aria-hidden="true" />,
     skills: [
       "Git",
       "GitHub",
@@ -66,44 +67,44 @@ const skillGroups = [
     ],
   },
   {
+    index: "04 // PRACTICES",
     category: "Engineering",
-    icon: <AiOutlineApartment size="2.4rem" aria-hidden="true" />,
-    gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
+    icon: <AiOutlineApartment size="1.7rem" aria-hidden="true" />,
     skills: [
-      "Responsive Design",
-      "Accessibility",
-      "Performance Optimization",
-      "Component Architecture",
+      "Responsive Layouts",
+      "Accessibility (WCAG)",
+      "Performance Tuning",
+      "Component Systems",
       "API Integration",
-      "Agile/Scrum",
-      "SDLC",
-      "Technical Documentation",
+      "Agile & Scrum",
+      "Technical Docs",
     ],
   },
 ];
 
 const Technologies = () => (
-  <Section id="skills">
+  <Section id="skills" aria-label="Technical Skills">
     <SectionDivider divider />
     <SectionTitle>Technical Skills</SectionTitle>
     <SectionText>
-      Core technologies, state management architectures, developer tools, and engineering methodologies utilized to design and ship reliable, production-grade web software.
+      Core technologies, state management architectures, developer tooling, and engineering methodologies utilized to design and ship reliable, production-grade web software.
     </SectionText>
 
     <SkillsGrid>
       {skillGroups.map((group, index) => (
         <SkillCategoryCard key={index}>
           <CategoryHeader>
+            <CategoryIndex>{group.index}</CategoryIndex>
             <CategoryTitleGroup>
-              <CategoryIconBadge gradient={group.gradient}>
+              <CategoryTitle>{group.category}</CategoryTitle>
+              <CategoryIconBadge aria-hidden="true">
                 {group.icon}
               </CategoryIconBadge>
-              <CategoryTitle>{group.category}</CategoryTitle>
             </CategoryTitleGroup>
-            <SkillCountBadge>{group.skills.length} Skills</SkillCountBadge>
+            <SkillCountBadge>{group.skills.length} competencies</SkillCountBadge>
           </CategoryHeader>
 
-          <SkillsList aria-label={`${group.category} skills`}>
+          <SkillsList aria-label={`${group.category} competencies`}>
             {group.skills.map((skill, idx) => (
               <SkillChip key={idx}>
                 <span className="chip-dot" aria-hidden="true" />

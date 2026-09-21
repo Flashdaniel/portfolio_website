@@ -29,8 +29,8 @@ const Footer = () => {
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:flashdaniel0@gmail.com">
-            flashdaniel0@gmail.com
+          <LinkItem href="mailto:danielchibundunweze@gmail.com">
+            danielchibundunweze@gmail.com
           </LinkItem>
         </LinkColumn>
         <LinkColumn>
@@ -52,28 +52,28 @@ const Footer = () => {
             href="https://github.com/Flashdaniel/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Daniel Nweze's GitHub Profile"
-            title="GitHub"
+            aria-label="Daniel Nweze's GitHub Profile (opens in new tab)"
+            title="GitHub (opens in new tab)"
           >
-            <AiFillGithub size="2.6rem" />
+            <AiFillGithub size="2rem" aria-hidden="true" />
           </SocialIcons>
           <SocialIcons
             href="https://www.linkedin.com/in/daniel-nweze-017909214/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Daniel Nweze's LinkedIn Profile"
-            title="LinkedIn"
+            aria-label="Daniel Nweze's LinkedIn Profile (opens in new tab)"
+            title="LinkedIn (opens in new tab)"
           >
-            <AiFillLinkedin size="2.6rem" />
+            <AiFillLinkedin size="2rem" aria-hidden="true" />
           </SocialIcons>
           <SocialIcons
             href="https://x.com/iamflashdaniel"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Daniel Nweze's X (Twitter) Profile"
-            title="X (Twitter)"
+            aria-label="Daniel Nweze's X / Twitter Profile (opens in new tab)"
+            title="X / Twitter (opens in new tab)"
           >
-            <AiFillTwitterCircle size="2.6rem" />
+            <AiFillTwitterCircle size="2rem" aria-hidden="true" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
