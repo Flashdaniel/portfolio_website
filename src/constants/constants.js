@@ -15,7 +15,7 @@ export const featuredProjects = [
     visit: "https://myrabbai.com.ng/",
     source: "https://github.com/Flashdaniel",
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+      "/myrabbai.png",
     id: 1,
   },
   {
@@ -32,7 +32,7 @@ export const featuredProjects = [
     visit: "https://github.com/Flashdaniel",
     source: "https://github.com/Flashdaniel",
     image:
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80",
+      "/tus-bootcamp.png",
     id: 2,
   },
   {
@@ -49,7 +49,7 @@ export const featuredProjects = [
     visit: "https://github.com/Flashdaniel",
     source: "https://github.com/Flashdaniel",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      "/campushq.png",
     id: 3,
   },
   {
@@ -66,7 +66,7 @@ export const featuredProjects = [
     visit: "https://bespoke-wisp-2d4be3.netlify.app/",
     source: "https://github.com/Flashdaniel/hng-audiophile",
     image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "/audiophile.png",
     id: 4,
   },
 ];
