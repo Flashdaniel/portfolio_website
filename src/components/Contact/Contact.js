@@ -50,6 +50,7 @@ const Contact = () => {
   const email = 'danielchibundunweze@gmail.com';
   const linkedin = 'https://www.linkedin.com/in/daniel-nweze-017909214/';
   const github = 'https://github.com/Flashdaniel';
+  const WEB3FORMS_ACCESS_KEY = 'c9579146-151c-46b5-aeff-93865679505c';
 
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
@@ -148,42 +149,49 @@ const Contact = () => {
     setErrorMessage('');
 
     try {
-      // Step 1: Attempt submission to Next.js API route
-      let response = await fetch('/api/contact', {
+      const payload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject.trim() || `Portfolio Inquiry from ${formData.name.trim()}`,
+        message: formData.message.trim(),
+        from_name: `${formData.name.trim()} (Portfolio)`,
+      };
+
+      // Primary: Send directly to Web3Forms API (compatible with static export & server deployments)
+      let response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
 
-      // Step 2: Fallback to direct FormSubmit endpoint if deployed on static host
-      if (!response.ok && response.status === 404) {
-        response = await fetch(
-          'https://formsubmit.co/ajax/danielchibundunweze@gmail.com',
-          {
+      // Fallback: If client ad-blocker blocks api.web3forms.com, route via Next.js API
+      if (!response.ok && response.status !== 400 && response.status !== 422) {
+        try {
+          const localApiRes = await fetch('/api/contact', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Accept: 'application/json',
-            },
-            body: JSON.stringify({
-              name: formData.name.trim(),
-              email: formData.email.trim(),
-              subject: formData.subject.trim() || 'Portfolio Inquiry',
-              message: formData.message.trim(),
-              _captcha: 'false',
-            }),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          });
+          if (localApiRes.ok) {
+            response = localApiRes;
           }
-        );
+        } catch (_) {
+          // If local API is not available (e.g. static export), keep original response
+        }
       }
 
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
 
       if (response.ok && (result.success === true || result.success === 'true')) {
         setStatus('success');
       } else {
         const msg =
-          result.error ||
           result.message ||
+          result.error ||
           'Unable to complete submission through the web service.';
         setErrorMessage(msg);
         setStatus('error');
