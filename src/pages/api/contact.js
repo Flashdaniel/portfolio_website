@@ -34,9 +34,13 @@ export default async function handler(req, res) {
   });
 
   try {
-    // Forward message to FormSubmit delivery service for Daniel
+    // Forward message to FormSubmit delivery service for Daniel with an 8-second timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
     const remoteResponse = await fetch('https://formsubmit.co/ajax/danielchibundunweze@gmail.com', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -49,19 +53,49 @@ export default async function handler(req, res) {
         _template: 'table',
       }),
     });
+    clearTimeout(timeoutId);
 
-    const data = await remoteResponse.json();
+    const data = await remoteResponse.json().catch(() => ({}));
+
+    // If FormSubmit returns a non-200 code or Cloudflare 522
+    if (!remoteResponse.ok) {
+      console.warn('[PORTFOLIO INBOX]: Remote relay HTTP', remoteResponse.status, data);
+      return res.status(502).json({
+        success: false,
+        error:
+          'External mail delivery service is temporarily unreachable (HTTP ' +
+          remoteResponse.status +
+          '). Please click "Send via Email Client" below or email danielchibundunweze@gmail.com directly.',
+      });
+    }
+
+    // Check if FormSubmit requires activation
+    if (data.success === false || data.success === 'false') {
+      const msg = typeof data.message === 'string' ? data.message : '';
+      if (msg.toLowerCase().includes('activat')) {
+        return res.status(403).json({
+          success: false,
+          error:
+            'FormSubmit requires one-time email activation. An activation email was sent to danielchibundunweze@gmail.com. Please check your Gmail Spam/Junk/Promotions folder and click "Activate Form".',
+        });
+      }
+      return res.status(400).json({
+        success: false,
+        error: msg || 'Unable to deliver message through relay service.',
+      });
+    }
+
     return res.status(200).json({
       success: true,
       message: 'Your message has been sent successfully.',
       remote: data,
     });
   } catch (error) {
-    // If external delivery service is temporarily unreachable, message was still recorded on server
-    console.warn('[PORTFOLIO INBOX]: Remote delivery service offline, message recorded locally.');
-    return res.status(200).json({
-      success: true,
-      message: 'Your message has been received successfully.',
+    console.warn('[PORTFOLIO INBOX]: Remote delivery exception:', error.message);
+    return res.status(503).json({
+      success: false,
+      error:
+        'Network error contacting the mail relay. Please use the "Send via Email Client" button below or reach out directly to danielchibundunweze@gmail.com.',
     });
   }
 }
